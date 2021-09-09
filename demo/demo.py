@@ -29,8 +29,8 @@ def setup_cfg(args):
     # add_panoptic_deeplab_config(cfg)
     
     # To use demo for PanopticFCN, please uncomment the following two lines.
-    # from detectron2.projects.panopticfcn import add_panopticfcn_config
-    # add_panoptic_deeplab_config(cfg)
+    from detectron2.projects.panopticfcn import add_panopticfcn_config
+    add_panoptic_deeplab_config(cfg)
     
     cfg.merge_from_file(args.config_file)
     cfg.merge_from_list(args.opts)
