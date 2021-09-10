@@ -38,7 +38,7 @@ DATASETS:
   TEST: ("cityscapes_fine_panoptic_val_separated",)
 DATALOADER:
   FILTER_EMPTY_ANNOTATIONS: True
-  NUM_WORKERS: 16
+  NUM_WORKERS: 2
 SOLVER:
   BASE_LR: 0.02
   WEIGHT_DECAY: 1e-4
