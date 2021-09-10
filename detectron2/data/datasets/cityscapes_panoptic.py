@@ -49,6 +49,9 @@ def get_cityscapes_panoptic_files(image_dir, gt_dir, json_info):
 
 
 def load_cityscapes_panoptic(image_dir, gt_dir, gt_json, meta):
+    print("image_dir: " + image_dir)
+    print("gt_dir: " + gt_dir)
+    print("gt_json: " + gt_json)
     """
     Args:
         image_dir (str): path to the raw dataset. e.g., "~/cityscapes/leftImg8bit/train".
@@ -100,9 +103,13 @@ def load_cityscapes_panoptic(image_dir, gt_dir, gt_json, meta):
             }
         )
     assert len(ret), f"No images found in {image_dir}!"
+    
+    print("ret[0]["sem_seg_file_name"]: "+ret[0]["sem_seg_file_name"])
+    print("ret[0]["pan_seg_file_name"]: "+ret[0]["pan_seg_file_name"])
+    
     assert PathManager.isfile(
         ret[0]["sem_seg_file_name"]
-    ), "Please generate labelTrainIds.png with cityscapesscripts/preparation/createTrainIdLabelImgs.py"  # noqa
+    ), "X Please generate labelTrainIds.png with cityscapesscripts/preparation/createTrainIdLabelImgs.py"  # noqa
     assert PathManager.isfile(
         ret[0]["pan_seg_file_name"]
     ), "Please generate panoptic annotation with python cityscapesscripts/preparation/createPanopticImgs.py"  # noqa
