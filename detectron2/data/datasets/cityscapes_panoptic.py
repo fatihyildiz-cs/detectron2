@@ -104,8 +104,8 @@ def load_cityscapes_panoptic(image_dir, gt_dir, gt_json, meta):
         )
     assert len(ret), f"No images found in {image_dir}!"
     
-    print("ret[0]["sem_seg_file_name"]: "+ret[0]["sem_seg_file_name"])
-    print("ret[0]["pan_seg_file_name"]: "+ret[0]["pan_seg_file_name"])
+    print("ret[0][sem_seg_file_name]: "+ret[0]["sem_seg_file_name"])
+    print("ret[0][pan_seg_file_name]: "+ret[0]["pan_seg_file_name"])
     
     assert PathManager.isfile(
         ret[0]["sem_seg_file_name"]
