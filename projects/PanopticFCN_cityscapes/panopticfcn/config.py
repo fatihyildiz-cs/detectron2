@@ -82,7 +82,7 @@ def add_panopticfcn_config(cfg):
     cfg.MODEL.INFERENCE.COMBINE.STUFF_AREA_LIMIT = 4096
     cfg.MODEL.INFERENCE.COMBINE.INST_THRESH      = 0.2
 
-    cfg.DATASETS.NAME = "COCO"
+    cfg.DATASETS.NAME = "cityscapesF"
 
     cfg.INPUT.CROP.MINIMUM_INST_AREA = 0
 
