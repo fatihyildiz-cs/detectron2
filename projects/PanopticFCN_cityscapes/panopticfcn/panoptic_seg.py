@@ -549,6 +549,8 @@ class PanopticFCN(nn.Module):
         stuff_labels = torch.unique(stuff_results)
         for stuff_label in stuff_labels:
             stuff_category_id = stuff_label.item()
+            if stuff_category_id==0: #this condition is experimental because we got key error:0 on the following line
+                continue
             category_id = self.meta.stuff_train_id2contiguous_id[stuff_category_id]
             if self.cfg.MODEL.POSITION_HEAD.STUFF.WITH_THING:
                 if stuff_label == 0:  # 0 is a special "thing" class
