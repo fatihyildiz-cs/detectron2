@@ -36,6 +36,10 @@ def setup_cfg(args):
     from detectron2.projects.panopticfcn_cityscapes import add_panopticfcn_config
     add_panopticfcn_config(cfg)
     
+    if cfg.DATASETS.NAME == 'Cityscapes':
+        from projects.PanopticFCN_cityscapes.data.cityscapes.cityscapes_panoptic_separated import register_all_cityscapes_panoptic
+        register_all_cityscapes_panoptic(cfg)
+    
     cfg.merge_from_file(args.config_file)
     cfg.merge_from_list(args.opts)
     # Set score_threshold for builtin models
