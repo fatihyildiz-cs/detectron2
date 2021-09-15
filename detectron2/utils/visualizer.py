@@ -513,7 +513,7 @@ class Visualizer:
 
         try:
             colors = [
-                self._jitter([x / 255 for x in self.metadata.thing_colors[c]]) for c in category_ids
+                self._jitter([x / 255 for x in self.metadata.thing_colors[c-11]]) for c in category_ids
             ]
         except AttributeError:
             colors = None
