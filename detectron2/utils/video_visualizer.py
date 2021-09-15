@@ -124,7 +124,7 @@ class VideoVisualizer:
     def draw_panoptic_seg_predictions(
         self, frame, panoptic_seg, segments_info, area_threshold=None, alpha=0.5
     ):
-        import pdb; pdb.set_trace()
+#         import pdb; pdb.set_trace()
         frame_visualizer = Visualizer(frame, self.metadata)
         pred = _PanopticPrediction(panoptic_seg, segments_info, self.metadata)
 
