@@ -536,7 +536,7 @@ class PanopticFCN(nn.Module):
                     panoptic_seg[_mask] = current_segment_id
                     thing_category_id = _cate.item()
                     category_id = self.meta.thing_train_id2contiguous_id[thing_category_id]
-                    print("category_id_th", category_id)
+#                     print("category_id_th", category_id)
                     segments_info.append(
                         {
                             "id": current_segment_id,
