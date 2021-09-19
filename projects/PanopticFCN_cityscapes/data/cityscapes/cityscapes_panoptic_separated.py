@@ -112,11 +112,6 @@ def load_cityscapes_panoptic(image_dir, gt_dir, gt_json, meta):
     print("ret[0][sem_seg_file_name]: "+ret[0]["sem_seg_file_name"])
     print("ret[0][pan_seg_file_name]: "+ret[0]["pan_seg_file_name"])
     print(" ")
-    print("ret[1][file_name]: "+ ret[1]["file_name"])
-    print("ret[1][image_id]: "+ ret[1]["image_id"])
-    print("ret[1][sem_seg_file_name]: "+ret[1]["sem_seg_file_name"])
-    print("ret[1][pan_seg_file_name]: "+ret[1]["pan_seg_file_name"])
-    print(" ")
     
     assert PathManager.isfile(
         ret[0]["sem_seg_file_name"]
