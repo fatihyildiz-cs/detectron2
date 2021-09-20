@@ -88,12 +88,12 @@ def load_cityscapes_panoptic(image_dir, gt_dir, gt_json, meta):
     files = get_cityscapes_panoptic_files(image_dir, gt_dir, json_info)
     ret = []
 
+    import pdb; 
+    pdb.set_trace()
     for image_file, label_file, segments_info in files:
         sem_label_file = (
             image_file.replace("leftImg8bit", "gtFine")[:-4]+"_labelTrainIds.png"
         )
-        import pdb; 
-        pdb.set_trace()
         segments_info = [_convert_category_id(x, meta) for x in segments_info]
         ret.append(
             {
