@@ -4,6 +4,7 @@
 import json
 import logging
 import os
+import pdb
 
 from detectron2.data import DatasetCatalog, MetadataCatalog
 from detectron2.data.datasets.builtin_meta import CITYSCAPES_CATEGORIES
@@ -87,9 +88,9 @@ def load_cityscapes_panoptic(image_dir, gt_dir, gt_json, meta):
         json_info = json.load(f)
     files = get_cityscapes_panoptic_files(image_dir, gt_dir, json_info)
     ret = []
-
-    import pdb; 
+    
     pdb.set_trace()
+    
     for image_file, label_file, segments_info in files:
         sem_label_file = (
             image_file.replace("leftImg8bit", "gtFine")[:-4]+"_labelTrainIds.png"
@@ -179,7 +180,9 @@ def register_all_cityscapes_panoptic(cfg):
     contiguous_id_to_stuff_train_id = dict()
     thing_id = 0
     stuff_id = 0
-
+    
+    pdb.set_trace()
+    
     for k in CITYSCAPES_CATEGORIES:
         if k["isthing"] == 1:
             thing_dataset_id_to_contiguous_id[k["id"]] = k["trainId"]
