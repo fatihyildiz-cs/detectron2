@@ -213,6 +213,30 @@ def register_all_cityscapes_panoptic(cfg):
     stuff_train_id2contiguous_id = dict(
         zip(contiguous_id_to_stuff_train_id.values(), contiguous_id_to_stuff_train_id.keys()))
 
+    
+    
+    
+    
+    def fillInDict(D1):
+        def findNext(i, d):
+            for k in d.keys():
+                if(k>i):
+                    return d[k]
+        for k in range(list(D1)[-1]):
+            if k not in D1.keys():
+                next = findNext(k, D1)
+                D1[k] = next
+    
+    fillInDict(thing_train_id2contiguous_id)
+    fillInDict(stuff_train_id2contiguous_id)
+    
+    
+    
+    
+    
+    
+    
+   
     meta["thing_train_id2contiguous_id"] = thing_train_id2contiguous_id
     meta["stuff_train_id2contiguous_id"] = stuff_train_id2contiguous_id
 
