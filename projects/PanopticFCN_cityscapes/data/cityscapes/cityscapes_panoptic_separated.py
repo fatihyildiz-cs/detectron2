@@ -214,8 +214,9 @@ def register_all_cityscapes_panoptic(cfg):
         zip(contiguous_id_to_stuff_train_id.values(), contiguous_id_to_stuff_train_id.keys()))
 
     
-    
-    
+#     following function takes D1={1: 1, 4: 2, 7: 3, 9: 4, 10: 5, 12: 6, 18: 7} and 
+#     produces D1={1: 1, 4: 2, 7: 3, 9: 4, 10: 5, 12: 6, 18: 7, 0: 1, 2: 2, 3: 2, 5: 3, 6: 3, 8: 4, 11: 6, 13: 7, 14: 7, 15: 7, 16: 7, 17: 7}
+#     (olmayan keyleri bir ustundeki keyin value'si ile ciftleyerek dictionary'e ekliyor)
     
     def fillInDict(D1):
         def findNext(i, d):
