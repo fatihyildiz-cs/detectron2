@@ -545,7 +545,7 @@ class PanopticFCN(nn.Module):
                             "category_id": category_id,
                             "instance_id": _idx,
                         })
-
+        import pdb; pdb.set_trace()
         stuff_labels = torch.unique(stuff_results)
         for stuff_label in stuff_labels:
             stuff_category_id = stuff_label.item()
