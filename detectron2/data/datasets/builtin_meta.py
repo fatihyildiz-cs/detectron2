@@ -200,8 +200,8 @@ KEYPOINT_CONNECTION_RULES = [
     ("right_knee", "right_ankle", (255, 195, 77)),
 ]
 
-All Cityscapes categories, together with their nice-looking visualization colors
-It's from https://github.com/mcordts/cityscapesScripts/blob/master/cityscapesscripts/helpers/labels.py  # noqa
+# All Cityscapes categories, together with their nice-looking visualization colors
+# It's from https://github.com/mcordts/cityscapesScripts/blob/master/cityscapesscripts/helpers/labels.py  # noqa
 CITYSCAPES_CATEGORIES = [
     {"color": (128, 64, 128), "isthing": 0, "id": 7, "trainId": 0, "name": "road"},
     {"color": (244, 35, 232), "isthing": 0, "id": 8, "trainId": 1, "name": "sidewalk"},
