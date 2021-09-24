@@ -228,8 +228,8 @@ def register_all_cityscapes_panoptic(cfg):
                 next = findNext(k, D1)
                 D1[k] = next
     
-    fillInDict(thing_train_id2contiguous_id)
-    fillInDict(stuff_train_id2contiguous_id)
+#     fillInDict(thing_train_id2contiguous_id)
+#     fillInDict(stuff_train_id2contiguous_id)
     
     
     
